@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Sayang! ❤️</title>
+    <title>Happy Birthday, My World! ❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
     <style>
         * {
@@ -28,12 +28,13 @@
             background: rgba(255, 255, 255, 0.95);
             border-radius: 24px;
             padding: 30px 20px;
-            max-width: 450px;
+            max-width: 480px;
             width: 100%;
             text-align: center;
             box-shadow: 0 15px 35px rgba(255, 105, 180, 0.2);
             position: relative;
             backdrop-filter: blur(5px);
+            z-index: 10;
         }
 
         .header-title {
@@ -51,7 +52,7 @@
             margin-bottom: 20px;
         }
 
-        /* Photo Gallery */
+        /* Galeri Foto */
         .gallery {
             display: flex;
             justify-content: center;
@@ -61,14 +62,13 @@
         }
 
         .photo-card {
-            width: 110px;
-            height: 110px;
+            width: 100px;
+            height: 100px;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             border: 3px solid #fff;
             transition: transform 0.3s ease;
-            position: relative;
         }
 
         .photo-card:hover {
@@ -81,20 +81,31 @@
             object-fit: cover;
         }
 
-        /* Message Box */
+        /* Message Box Ucapan */
         .message-box {
             background: #fff0f3;
             border-radius: 16px;
-            padding: 20px;
+            padding: 22px;
             font-size: 0.95rem;
-            line-height: 1.7;
+            line-height: 1.8;
             color: #555;
             margin-bottom: 25px;
             text-align: left;
             border-left: 4px solid #ff6b81;
+            max-height: 380px;
+            overflow-y: auto; /* Agar nyaman dibaca jika teks cukup panjang */
         }
 
-        /* Interactive Button */
+        /* Custom Scrollbar untuk kotak pesan */
+        .message-box::-webkit-scrollbar {
+            width: 6px;
+        }
+        .message-box::-webkit-scrollbar-thumb {
+            background-color: #ffb6c1;
+            border-radius: 10px;
+        }
+
+        /* Tombol Interaktif */
         .btn-love {
             background: linear-gradient(45deg, #ff4757, #ff6b81);
             color: white;
@@ -114,7 +125,7 @@
             box-shadow: 0 12px 25px rgba(255, 71, 87, 0.6);
         }
 
-        /* Floating Hearts Animation */
+        /* Animasi Hati Terbang */
         .floating-heart {
             position: fixed;
             font-size: 1.5rem;
@@ -132,7 +143,7 @@
             100% {
                 transform: translateY(-10vh) scale(1.4) rotate(360deg);
                 opacity: 0;
-           }
+            }
         }
 
         #ytPlayer {
@@ -142,48 +153,63 @@
 </head>
 <body>
 
-    <!-- Lagu Ulang Tahun Awal (Memakai MP3 lokal di GitHub) -->
-    <audio id="laguHBD" src="Happy Birthday.mp3" autoplay loop></aud
+    <!-- Musik Ulang Tahun Awal -->
+    <audio id="laguHBD" src="Happy Birthday.mp3" autoplay loop></audio>
 
     <div class="card">
         <h1 class="header-title">Happy Birthday! ❤️</h1>
-        <p class="sub-title">30 Januari • Untuk Pacarku</p>
+        <p class="sub-title">30 Januari • Untuk Pacarku 🎀</p>
 
-        <!-- Gallery Foto (Ganti URL/file foto di bawah) -->
+        <!-- Galeri Foto (Pastikan nama file foto di GitHub sesuai) -->
         <div class="gallery">
-            <div class="photo-card">
-                <img src="foto1.jpeg" alt="Foto 1">
-            </div>
-            <div class="photo-card">
-                <img src="foto5.jpeg" alt="Foto 2">
-            </div>
-            <div class="photo-card">
-                <img src="foto6.jpeg" alt="Foto 3">
-            </div>
+            <div class="photo-card"><img src="foto1.jpg" alt="Foto 1"></div>
+            <div class="photo-card"><img src="foto5.jpg" alt="Foto 2"></div>
+            <div class="photo-card"><img src="foto6.jpg" alt="Foto 3"></div>
         </div>
 
-        <!-- Surat Ucapan -->
+        <!-- Surat Ucapan dari Kamu -->
         <div class="message-box">
-            <p>Allowww my handsome, my love, my world!🕊️✨🤍 <br><br>
-            Happy Birthday to u cintaku! selamat bertambah usia sayang, diumur kamu sekarang ini aku berdoa semoga kamu selalu lindungan Allah SWT. Walaupun kita LDR dan belum bisa rayain langsung bareng-bareng, semoga kehangatan ucapan ini sampai ke kamu.<br><br>
+            <p>Allowww my handsome, my love, my world!🕊️✨🤍<br><br>
+            Happy Birthday to u cintaku! Selamat bertambah usia sayang, di umur kamu sekarang ini aku berdoa semoga kamu selalu dalam lindungan Allah SWT. Walaupun kita LDR dan belum bisa rayain langsung bareng-bareng, semoga kehangatan ucapan ini sampai ke kamu.<br><br>
             Selalu sehat, selalu baikk, dan menjadi seseorang yang selaluuu ingin tumbuh menjadi lebih baik, jadi pribadi yang lebih baik buat diri sendiri dan orang lain yaaa!<br><br>
             Terima kasih ya sudah selalu sabar, menemani hari-hariku, dan bertahan sejauh ini. Semoga di umur yang baru ini kamu sehat selalu, makin sukses, dan semua impianmu bisa tercapai satu per satu.<br><br>
-            Ingat ada aku disini yang selalu nemenin proses kamu, kamu jangan takut akan kehilangan aku:V, malah aku yang lebih takut kamu pergi dari aku.<br><br>
-            Aku harap kamu adalah tidak berubah ya sayang, tetap sayang sama aku wkkwkwk dan itu harusssss AKU MAKSAA!<br><br>
+            Ingat ada aku disini yang selalu nemenin proses kamu, kamu jangan takut akan kehilangan aku :P, malah aku yang lebih takut kamu pergi dari aku.<br><br>
+            Aku harap kamu tidak berubah ya sayang, tetap sayang sama aku wkwkwk dan itu harusssss AKU MAKSAA!<br><br>
             AHAHAHHA kita jalanin hubungan udah 5 bulan, bismillah sampai ke pelaminan yaw awww.<br><br>
             Terima kasih sudah mencintai perempuan serumit aku, yang banyak kurangnya hihi.. Love Youu<br><br>
-            INGAT JANGAN INSECURE SAMA AKU, AKU TETAP MENGHARGAI APAPUN ITU YANG KAMU KASIH KE AKU, SELAGI KAMU BERUSAHA BUAT AKU, AKU BERSYUKUR SANGAT SANGAT BERSYUKURRR:).<br><br>
-            seiring waktu berjalan, semoga rasa sayangmu tidak akan pernah berubah sedikitpun.<br><br>
-            Sampai ketemu di pertemuan kita selanjutnya! Aku sayang kamu💖.</p>
+            INGAT JANGAN INSECURE SAMA AKU, AKU TETAP MENGHARGAI APAPUN ITU YANG KAMU KASIH KE AKU, SELAGI KAMU BERUSAHA BUAT AKU, AKU BERSYUKUR SANGAT SANGAT BERSYUKURRR :).<br><br>
+            Seiring waktu berjalan, semoga rasa sayangmu tidak akan pernah berubah sedikitpun.<br><br>
+            Sampai ketemu di pertemuan kita selanjutnya! Aku sayang kamu💖.<br><br>
+            <i>"Ada lagu khusus buat kamu nih, dengerin ya sayang..."</i> 👇✨</p>
         </div>
 
-        <!-- Tombol Kejutan Animasi -->
-        <button class="btn-love" onclick="kirimCinta()">Tekan Untuk Love! ✨</button>
+        <!-- Tombol Kejutan -->
+        <button class="btn-love" id="tombolLove" onclick="gantiKeVierra()">Tekan Untuk Putar Lagu Spesial! 🎵✨</button>
     </div>
 
+    <!-- Container Player YouTube -->
+    <div id="ytPlayer"></div>
+
     <script>
-        function kirimCinta() {
-            // Membuat hujan animasi hati saat tombol diklik
+        // ID YouTube Vierra - Bersamamu
+        const youtubeVideoId = "e8Z4a0U060M"; 
+
+        function gantiKeVierra() {
+            // Matikan audio HBD
+            const laguHBD = document.getElementById('laguHBD');
+            if(laguHBD) {
+                laguHBD.pause();
+                laguHBD.currentTime = 0;
+            }
+
+            // Putar lagu Vierra
+            const container = document.getElementById('ytPlayer');
+            container.innerHTML = `<iframe width="0" height="0" src="https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&enablejsapi=1" frameborder="0" allow="autoplay"></iframe>`;
+
+            // Ubah tombol
+            document.getElementById('tombolLove').innerText = "🎶 Vierra - Bersamamu Diputar... ❤️";
+
+            // Jalankan animasi love
             for (let i = 0; i < 35; i++) {
                 setTimeout(() => {
                     createHeart();
@@ -195,8 +221,7 @@
             const heart = document.createElement('div');
             heart.classList.add('floating-heart');
             
-            // Variasi ikon cinta
-            const icons = ['❤️', '💖', '💕', '💗', '🌸'];
+            const icons = ['❤️', '💖', '💕', '💗', '🌸', '🧸', '🎀'];
             heart.innerText = icons[Math.floor(Math.random() * icons.length)];
             
             heart.style.left = Math.random() * 100 + 'vw';
